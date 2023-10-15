@@ -1,3 +1,5 @@
+using System;
+
 namespace Play.Catalog.Service;
 
 public class WeatherForecast
