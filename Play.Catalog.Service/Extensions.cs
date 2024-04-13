@@ -1,6 +1,4 @@
-﻿using Play.Catalog.Service.Dtos;
-
-namespace Play.Catalog.Service;
+﻿namespace Play.Catalog.Service;
 
 public static class Extensions
 {

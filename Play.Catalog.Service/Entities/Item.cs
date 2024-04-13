@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Item
+public class Item : IEntity
 {
     public Guid Id { get; set; }
 
