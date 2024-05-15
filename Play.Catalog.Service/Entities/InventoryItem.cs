@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Play.Common;
+using System;
 
-public class Item : IEntity
+public class InventoryItem : IEntity
 {
     public Guid Id { get; set; }
 
