@@ -5,10 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
-using MongoDB.Bson.Serialization.Serializers;
-using Play.Common.MongoDb;
+using Play.Common.MassTransit;
+using Play.Common.MongoDB;
 using Play.Common.Settings;
 
 namespace Play.Catalog.Service;
@@ -33,7 +31,8 @@ public class Startup
         ArgumentNullException.ThrowIfNull(serviceSettings, nameof(serviceSettings));
 
         services.AddMongo()
-                .AddMongoRepository<Item>("items");
+                .AddMongoRepository<Item>("items")
+                .AddMassTransitWithRabbitMq();
 
         services.AddControllers(options =>
         {
